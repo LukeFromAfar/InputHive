@@ -1,5 +1,5 @@
 <script>
-    import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Dropdown, DropdownItem, DropdownDivider } from 'flowbite-svelte';
+    import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Dropdown, DropdownItem, DropdownDivider, DarkMode } from 'flowbite-svelte';
     import { page } from '$app/stores';
     $: activeUrl = $page.url.pathname;
 </script>
@@ -14,6 +14,7 @@
       <NavLi href="/">Home</NavLi>
       <NavLi href="/admin/dashboard">Dashboard</NavLi>
       <NavLi href="/auth/login">Log in</NavLi>
+      <DarkMode class="p-0"/>
     </NavUl>
   </Navbar>
 </div>

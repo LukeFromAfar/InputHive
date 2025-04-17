@@ -4,7 +4,7 @@
 
 @plugin 'flowbite/plugin';
 
-/* @import 'flowbite/dist/flowbite.css'; */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
     font-family: 'Merriweather';
@@ -43,15 +43,21 @@
   --color-secondary-900: #0c4a6e;
 }
 
+
+
 @layer base {
   button, [role="button"] {
     cursor: pointer;
   }
-}
-
-body {
-  background-color: rgb(18 18 18);
-  color: #fff;
+  
+  /* Add these new rules for light/dark mode backgrounds */
+  html {
+    @apply bg-white text-gray-900;
+  }
+  
+  html.dark {
+    @apply bg-neutral-900 text-white;
+  }
 }
 
 @source "../node_modules/flowbite-svelte/dist";

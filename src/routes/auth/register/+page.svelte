@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Section, Register } from 'flowbite-svelte-blocks';
 	import { Button, Checkbox, Label, Input } from 'flowbite-svelte';
+    import ThemeAwareIcon from '$lib/components/ThemeAwareIcon.svelte';
 </script>
 
 <Section name="register" class="mt-16">
@@ -33,13 +34,13 @@
 				</div>
 		
 				<div class="flex flex-row justify-center pt-4 *:px-2">
-					<a href="/" >
-						<img src="/icons/login/github-mark-white.svg" alt="Github logo" class="w-10 h-10">
-					</a>
-					<a href="/">
-						<img src="/icons/login/web_dark_rd_na.svg" alt="Google logo" class="w-10 h-10">
-					</a>
-				</div>
+                    <a href="/" class=" rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition">
+                        <ThemeAwareIcon src="/icons/login/github-mark-white.svg" alt="Github logo" />
+                    </a>
+                    <a href="/" class="rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition">
+                        <ThemeAwareIcon src="/icons/login/web_dark_rd_na.svg" alt="Google logo" />
+                    </a>
+                </div>
 				<Button type="submit" class="w-full1">Create an account</Button>
 				<div class="text-sm font-medium text-gray-500 dark:text-gray-300">
 					Already have an account? <a href="/auth/login" class="text-primary-600 dark:text-primary-500 font-medium underline hover:text-neutral-100">Login here</a>
